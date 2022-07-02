@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Ejemplo de mapa</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	</head>
+	<body>
+		<h1>POKEMONES EXISTENTES</h1>
+
+		<div id="divMap" class="map map-home" style="margin:12px 0 12px 0;height:400px;"></div>
+		<script>
+			var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+				osmAttrib = '&copy; <a href="https://itla.edu.do/virtual/mod/assign/view.php?id=11784">Yander Sanchez</a> contributors',
+				osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
+			var map = L.map('divMap').setView([19.4398315,-70.8132746], 8).addLayer(osm);
+
+			
+        L.marker([90.56565,70.194919])
+				.addTo(map)
+				.bindPopup('Nombre: pikachu, Edad: 19');
+        
+
+        L.marker([70.56565,-19.56565])
+				.addTo(map)
+				.bindPopup('Nombre: metapod, Edad: 20');
+        
+
+        L.marker([70.12123,-13.45689])
+				.addTo(map)
+				.bindPopup('Nombre: charmander, Edad: 17');
+        
+
+        L.marker([40.1212313,25.1213232])
+				.addTo(map)
+				.bindPopup('Nombre: charizard, Edad: 26');
+        
+
+        L.marker([70.1596,-40.7412])
+				.addTo(map)
+				.bindPopup('Nombre: pikachu, Edad: 13');
+        
+
+		</script>
+		<p>
+			Mapa realizado por Yander Sanchez
+		</p>
+  </body>
+</html>

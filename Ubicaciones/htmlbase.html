@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Ejemplo de mapa</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	</head>
+	<body>
+		<h1 style="margin:2% 5% 2% 5%; font-weight: bold; font-family: cursive; font-style: italic;">POKEMONES EXISTENTES</h1>
+
+		<div id="divMap" class="map map-home" style="margin:2% 5% 2% 5%; height:400px; padding: 3%;"></div>
+		<script>
+			var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+				osmAttrib = '&copy; <a href="https://itla.edu.do/virtual/mod/assign/view.php?id=11784">Yander Sanchez</a> contributors <img src="https://scontent-mia3-1.cdninstagram.com/vp/ecb466c4e7c1a9bc5b94cd2548fda53f/5BF2F063/t51.2885-19/s150x150/31176372_515190202290371_2567209692073820160_n.jpg" height="30px">',
+				osm = L.tileLayer(osmUrl, {maxZoom: 11, minZoom: 1, attribution: osmAttrib});
+			var map = L.map('divMap').setView([18.853236,-71.286684], 8).addLayer(osm);
+
+			
+        L.marker([90.56565,70.194919])
+				.addTo(map)
+				.bindPopup('Nombre: pikachu, Edad: 19');
+        
+
+        L.marker([70.56565,-19.56565])
+				.addTo(map)
+				.bindPopup('Nombre: metapod, Edad: 20');
+        
+
+        L.marker([70.12123,-13.45689])
+				.addTo(map)
+				.bindPopup('Nombre: charmander, Edad: 17');
+        
+
+        L.marker([40.1212313,25.1213232])
+				.addTo(map)
+				.bindPopup('Nombre: charizard, Edad: 26');
+        
+
+        L.marker([70.1596,-40.7412])
+				.addTo(map)
+				.bindPopup('Nombre: pikachu, Edad: 13');
+        
+
+        L.marker([18.455129,-70.644663])
+				.addTo(map)
+				.bindPopup('Nombre: mew, Edad: 19');
+        
+
+        L.marker([18.566048,-70.766498])
+				.addTo(map)
+				.bindPopup('Nombre: vulpix, Edad: 30');
+        
+
+        L.marker([18.299179,-70.351111])
+				.addTo(map)
+				.bindPopup('Nombre: snorlax, Edad: 43');
+        
+
+        L.marker([18.642594,-70.236148])
+				.addTo(map)
+				.bindPopup('Nombre: flareon, Edad: 33');
+        
+
+        L.marker([18.872820,-70.056435])
+				.addTo(map)
+				.bindPopup('Nombre: onix, Edad: 26');
+        
+
+        L.marker([18.989064,-70.544037])
+				.addTo(map)
+				.bindPopup('Nombre: gastly, Edad: 23');
+        
+
+        L.marker([19.402339,-71.5626])
+				.addTo(map)
+				.bindPopup('Nombre: golem, Edad: 20');
+        
+
+        L.marker([19.62091,-71.242754])
+				.addTo(map)
+				.bindPopup('Nombre: lucario, Edad: 13');
+        
+
+        L.marker([19.752664,-70.802967])
+				.addTo(map)
+				.bindPopup('Nombre: lucario, Edad: 15');
+        
+
+        L.marker([19.240105,-69.711494])
+				.addTo(map)
+				.bindPopup('Nombre: pichu, Edad: 11');
+        
+
+		</script>
+		<p style="margin:2% 5% 2% 5%; font-weight: bold; font-family: cursive; font-size: 20px; font-style: italic;">Mapa realizado por Yander Sanchez</p>
+  </body>
+</html>
